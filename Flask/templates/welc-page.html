@@ -83,17 +83,17 @@
 
                 <div class="container3">
                     <div class="picture2">
-                        <img class="uofg-view2" src="formpage.jpg">
+                        <img class="uofg-view2" src="{{ url_for('static', filename='images/formpage.jpg') }}">
                     </div>
                     <h2>Students Experience</h2>
                     <ul class="flexible-study-list2">
                         <!-- List of links related to information -->
-                        <li><a href="explain-page.html">Personal Information</a></li>
-                        <li><a href="explain-page.html">Academic Experience</a></li>
-                        <li><a href="explain-page.html">Campus Facilities and Services</a></li>
-                        <li><a href="explain-page.html">Overall Satisfaction</a></li>
-                        <li><a href="explain-page.html">Consent and Privacy</a></li>
-                        <li><a href="explain-page.html">FAQs About Data Collection</a></li>
+                        <li><a href="{{ url_for('about') }}">Personal Information</a></li>
+                        <li><a href="{{ url_for('about') }}">Academic Experience</a></li>
+                        <li><a href="{{ url_for('about') }}">Campus Facilities and Services</a></li>
+                        <li><a href="{{ url_for('about') }}">Overall Satisfaction</a></li>
+                        <li><a href="{{ url_for('about') }}">Consent and Privacy</a></li>
+                        <li><a href="{{ url_for('about') }}">FAQs About Data Collection</a></li>
                     </ul>
                 </div>
 
@@ -101,13 +101,13 @@
         <div class="container4">
             <!-- Image related to contacting the university -->
             <div class="picture3">
-                <img class="kelving" src="kelvingrove.jpg" >
+                <img class="kelving" src="{{ url_for('static', filename='images/kelvingrove.jpg') }}" >
             </div>
             <!-- Header for the 'Contact Us' section -->
             <h2>Contact us</h2>
             <!-- Link to the contact information page -->
             <ul class="flexible-study-list3">
-                <li><a href="explain-page.html">Find details you need to get help.</a></li>
+                <li><a href="{{ url_for('about') }}">Find details you need to get help.</a></li>
             </ul>
         </div>
 
@@ -115,13 +115,13 @@
         <div class="container5">
             <!-- Image prompting users to support the university -->
             <div class="picture4">
-                <img class="panting" src="painting.jpg">
+                <img class="panting" src="{{ url_for('static', filename='images/painting.jpg') }}">
             </div>
             <!-- Header for the 'Support Us' section -->
             <h2>Support us</h2>
             <!-- Call-to-action link for users to provide support -->
             <ul class="flexible-study-list4">
-                <li><a href="form-page.html">Click here to fill the form</a></li>
+                <li><a href="{{ url_for('form') }}">Click here to fill the form</a></li>
             </ul>
         </div>
 
@@ -129,7 +129,7 @@
         <div class="container6">
             <p>University of Glasgow<br>
             Glasgow International College <br>
-            Glasgow, G12 8QQ, Scotland<br>
+            Glasgow, G11 6NU, Scotland<br>
             Tel +44 (0) 0000000000<br>
             Contact us<br>
             Maps and travel</p>
