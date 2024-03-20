@@ -4,7 +4,7 @@
         <!-- Stylesheets for consistent font across the website -->
         <link rel="stylesheet" href="{{ url_for('static', filename='css/724style.css') }}">
         <meta charset="UTF-8">
-        <title>Home/Welcome</title>
+        <title>Home/FORM</title>
 
          <!-- Multiple font preconnections for diverse typographic options -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -28,6 +28,15 @@
         <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
+        {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for message in messages %}
+                    <li>{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
         <!-- Header section with the organization's logo and navigation -->
         <div class="header">
             <div class="logo">
@@ -43,7 +52,7 @@
                     <a href="{{ url_for('home') }}">Home</a>
                     <a href="{{ url_for('about') }}">about us</a>
                     <a href="{{ url_for('form') }}">form</a>
-                    
+
                 </div>
                 <!-- Search form for user convenience -->
                 <form class="search-bar">
