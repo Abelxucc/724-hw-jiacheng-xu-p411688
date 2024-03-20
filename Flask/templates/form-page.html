@@ -124,26 +124,37 @@
 
                             {{ form.submit() }}
                         </form>
-                        
-                    <script>
+                   <script>
                         // JavaScript function to provide a thank you message after form submission
-                        function thankYouMessage(e) {
+                         function thankYouMessage(e) {
                             e.preventDefault();
-                            alert('Thank you for filling out our questionnaire!'); 
-                            document.getElementById('dataForm').reset(); 
-                            document.getElementById('thankYouText').style.display = 'block';
-                            window.scrollTo(0,0)/*bring user to front of web*/
+                            fetch(e.target.action, {
+                                method: 'POST',
+                                body: new FormData(e.target)
+                            })
+                            .then(response => response.json())
+                            .then(data => {
+                                if (data.success) {
+                                    alert('Thank you for filling out our questionnaire!');
+                                    document.getElementById('dataForm').reset();
+                                    window.scrollTo(0, 0); /*bring user to front of web*/
+                                }
+                            });
                         }
+                        document.getElementById('dataForm').addEventListener('submit', thankYouMessage);
                     </script>
+                    </div>
                 </div>
-                
                 <!-- Contact information section for the university, providing address and contact details -->
                 <div class="container15">
                     <p>University of Glasgow</br>
                     Glasgow International College </br>
-                    Glasgow, G12 8QQ, Scotland</br>
+                    Glasgow, G11 6NU, Scotland</br>
                     Tel +44 (0) 0000000000</br>
                     Contact us</br>
                     Maps and travel</p>
                 </div>
             </div>
+        </div>
+    </body>
+</html>
