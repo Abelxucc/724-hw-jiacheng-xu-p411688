@@ -2,6 +2,7 @@ from flask import Flask, render_template, jsonify
 from forms import FeedbackForm
 
 app = Flask(__name__)
+app.config['SECRET_KEY'] = 'your-very-secret-key'
 @app.route('/form', methods=['GET', 'POST'])
 
 def form():
