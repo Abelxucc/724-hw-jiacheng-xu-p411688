@@ -514,7 +514,7 @@ font-family: "Open Sans", sans-serif;
 
 .container12{
     flex:1;
-    min-height: 2000px;
+    min-height: 1900px;
     min-width: 1600px;
     max-width: 1600px;
     margin: 50px;
@@ -548,7 +548,7 @@ font-family: "Open Sans", sans-serif;
 
 .container14{
     background-color: white;
-    height: 1620px;
+    height: 1520px;
     min-width: 100%;
     flex-grow: 0;
     flex-shrink: 0;
@@ -566,7 +566,7 @@ font-family: "Open Sans", sans-serif;
     flex-grow: 0;
     flex-shrink: 0;
     border-radius: 10px;
-    margin-top: 1830px;
+    margin-top: 1730px;
     margin-left: 30px;
     order:4;
     
@@ -578,7 +578,7 @@ font-family: "Open Sans", sans-serif;
 
 .container20 {
     background-color: #EDEDED;
-    height: 1550px;
+    height: 1450px;
     max-width: 800px;
     min-width: 800px;
     flex-grow: 0;
