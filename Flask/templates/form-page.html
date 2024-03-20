@@ -73,46 +73,32 @@
                 <div class="container14">
                     <div class="container20">
                         <!-- Data collection form with various input types for comprehensive information gathering -->
-                        <form id="dataForm" onsubmit="thankYouMessage(event)">
-
+                        <form id="dataForm" method="POST" action="{{ url_for('form') }}">
+                             {{ form.hidden_tag() }}
                              <!-- Fieldset for grouping personal information fields -->
                             <fieldset>
                                 <legend>Personal Information</legend>
-                                  <!-- Input for first name, marked as required for data integrity -->
-                                <label for="first-name">First Name:</label>
-                                <input type="text" id="first-name" name="first_name" required>
-                                <!-- Input for last name, also required -->
-                                <label for="last-name">Last Name:</label>
-                                <input type="text" id="last-name" name="last_name" required>
+                                {{ form.first_name.label }} {{ form.first_name(size=20) }}
+                                {{ form.last_name.label }} {{ form.last_name(size=20) }}
                             </fieldset>
-                            
+
                             <!-- Fieldset for contact information to enable further communication -->
                             <fieldset>
                                 <legend>Contact Information</legend>
                                 <!-- Email input for primary contact method, required for follow-up -->
-                                <label for="email">Email:</label>
-                                <input type="email" id="email" name="email" required>
-                                <label for="phone">Phone:</label>
-                                <input type="tel" id="phone" name="phone">
+                                {{ form.email.label }} {{ form.email(size=20) }}
+                                {{ form.phone.label }} {{ form.phone(size=13) }}
                             </fieldset>
+
                             <fieldset>
-                                <legend>Question Information</legend>
-                                <!-- Optional telephone contact for alternative communication means -->
-                                <p>1. What do you think of your experience at GIC?</p>
-                                <!-- Radio options for experience levels -->
-                                <label for="experience-perfect">Perfect</label>
-                                <input type="radio" id="experience-perfect" name="experience" value="perfect" required>
-                                
-                                <label for="experience-good">Good</label>
-                                <input type="radio" id="experience-good" name="experience" value="good">
-                                
-                                <label for="experience-average">Normal</label>
-                                <input type="radio" id="experience-average" name="experience" value="normal">
-                                
-                                <label for="experience-poor">Poor</label>
-                                <input type="radio" id="experience-poor" name="experience" value="poor">
-                            </fieldset>                           
-                            <fieldset>
+                            <legend>{{ form.experience.label.text }}</legend>
+                                {% for subfield in form.experience %}
+                                    <div>
+                                         {{ subfield() }} {{ subfield.label.text}}
+                                    </div>
+                                {% endfor %}
+                            </fieldset>
+
                                 <legend>improvement of GIC</legend>
                                 <label for="Resources and Facilities">
                                     <input type="checkbox" id="improvements" name="improvement" value="Resources and Facilities">
