@@ -642,14 +642,36 @@ font-family: "Open Sans", sans-serif;
 }
 
 
+
 textarea {
-    padding: 10px; 
-    border: 4px solid #ccc; 
-    margin-top: 5px; 
+    padding: 10px;
+    border: 4px solid #ccc;
+    margin-top: 5px;
     margin-left: 7px;
     font-family: 'Open Sans', sans-serif;
     resize: none; /*can't drag*/
     width: 500px;
     border-radius: 5px;
     height: 100px;
+}
+
+.form-check{
+    display: flex;
+    align-items: center;
+}
+.form-check-input{
+    vertical-align: middle;
+    margin-top: 0;
+    margin-right:0.5em;
+}
+
+.form-check-label {
+    vertical-align: middle;
+    margin-bottom: 1px;
+    line-height: 1;
+}
+*,*:before, *after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
