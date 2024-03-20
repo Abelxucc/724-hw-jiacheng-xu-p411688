@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <!-- Stylesheets for consistent font across the website -->
-        <link rel="stylesheet" href="./724style.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/724style.css') }}">
         <meta charset="UTF-8">
         <title>Home/Welcome</title>
 
@@ -22,17 +22,17 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
-        
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">            
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
     </head>
     <body>
         <!-- Header section with the organization's logo and navigation -->
         <div class="header">
             <div class="logo">
                 <!-- Using the university logo for brand recognition -->
-                <img class="uofg-img" src="logo of uofg.jpg">
+                <img class="uofg-img" src="{{ url_for('static', filename='images/logo of uofg.jpg') }}">
                 <h2>Glasgow International College</h2>
                 <!-- navigation for better user orientation -->
                 <P>HOME / FORM</P>
@@ -40,10 +40,10 @@
             <div class="navigation-container">
                  <!-- Navigation bar for site-wide links -->
                 <div class="navigation">
-                    <a href="welc-page.html">Home</a>
-                    <a href="explain-page.html">about us</a>
-                    <a href="form-page.html">form</a>
-                    
+                    <a href="{{ url_for('home') }}">Home</a>
+                    <a href="{{ url_for('about') }}">about us</a>
+                    <a href="{{ url_for('form') }}">form</a>
+
                 </div>
                 <!-- Search form for user convenience -->
                 <form class="search-bar">
@@ -52,7 +52,7 @@
                 </form>
             </div>
         </div>
-        
+
         <div class = "flex-parent">
             <!-- Main container for flexible layout using Flexbox -->
             <div class="container">
@@ -60,18 +60,18 @@
                 <div class="container1">
                     <!-- Image that provides a visual representation of the university -->
                     <div class="picture">
-                        <img class="uofg-view" src="uofgview.jpg">
+                        <img class="uofg-view" src="{{ url_for('static', filename='images/uofgview.jpg') }}">
                     </div>
                     <!-- Header for the 'About Us' section -->
                     <h2>Information about us</h2>
                     <!-- List of links for various informational pages about the university -->
                     <ul class="flexible-study-list">
-                        <li><a href="explain-page.html">Understanding the Process</a></li>
-                        <li><a href="explain-page.html">Student Success Stories</a></li>
-                        <li><a href="explain-page.html">Improving Educational Outcomes</a></li>
-                        <li><a href="explain-page.html">Enhancing Campus Life</a></li>
-                        <li><a href="explain-page.html">Secure & Confidential</a></li>
-                        <li><a href="explain-page.html">FAQs About Data Collection</a></li>
+                        <li><a href="{{ url_for('about') }}">Understanding the Process</a></li>
+                        <li><a href="{{ url_for('about') }}">Student Success Stories</a></li>
+                        <li><a href="{{ url_for('about') }}">Improving Educational Outcomes</a></li>
+                        <li><a href="{{ url_for('about') }}">Enhancing Campus Life</a></li>
+                        <li><a href="{{ url_for('about') }}">Secure & Confidential</a></li>
+                        <li><a href="{{ url_for('about') }}">FAQs About Data Collection</a></li>
                     </ul>
                 </div>
                 <!-- Container for welcome message and call-to-action -->
