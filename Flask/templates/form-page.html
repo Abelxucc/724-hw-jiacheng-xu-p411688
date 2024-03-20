@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Stylesheets for consistent font across the website -->
+        <link rel="stylesheet" href="./724style.css">
+        <meta charset="UTF-8">
+        <title>Home/FORM</title>
+
+         <!-- Multiple font preconnections for diverse typographic options -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200..900&family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap" rel="stylesheet">            
+    </head>
+    <body>
+        <!-- Header section with the organization's logo and navigation -->
+        <div class="header">
+            <div class="logo">
+                <!-- Using the university logo for brand recognition -->
+                <img class="uofg-img" src="logo of uofg.jpg">
+                <h2>Glasgow International College</h2>
+                <!-- navigation for better user orientation -->
+                <P>HOME / FORM</P>
+            </div>
+            <div class="navigation-container">
+                 <!-- Navigation bar for site-wide links -->
+                <div class="navigation">
+                    <a href="welc-page.html">Home</a>
+                    <a href="explain-page.html">about us</a>
+                    <a href="form-page.html">form</a>
+                    
+                </div>
+                <!-- Search form for user convenience -->
+                <form class="search-bar">
+                    <input type="text" name="search" placeholder="Search">
+                    <button type="submit">Go</button>
+                </form>
+            </div>
+        </div>
+
+        <!-- Main content area for user interaction -->
+        <div class = "flex-parent">
+            <div class="container12">
+                <!-- Introduction text to welcome user participation -->
+                <div class="container13">
+                    <p>We greatly appreciate the opportunity to hear your thoughts and experiences regarding the school. Your insights are invaluable to us! </p>
+                </div>
+                <!-- Container for the main data collection form -->
+                <div class="container14">
+                    <div class="container20">
+                        <!-- Data collection form with various input types for comprehensive information gathering -->
+                        <form id="dataForm" onsubmit="thankYouMessage(event)">
+
+                             <!-- Fieldset for grouping personal information fields -->
+                            <fieldset>
+                                <legend>Personal Information</legend>
+                                  <!-- Input for first name, marked as required for data integrity -->
+                                <label for="first-name">First Name:</label>
+                                <input type="text" id="first-name" name="first_name" required>
+                                <!-- Input for last name, also required -->
+                                <label for="last-name">Last Name:</label>
+                                <input type="text" id="last-name" name="last_name" required>
+                            </fieldset>
+                            
+                            <!-- Fieldset for contact information to enable further communication -->
+                            <fieldset>
+                                <legend>Contact Information</legend>
+                                <!-- Email input for primary contact method, required for follow-up -->
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required>
+                                <label for="phone">Phone:</label>
+                                <input type="tel" id="phone" name="phone">
+                            </fieldset>
+                            <fieldset>
+                                <legend>Question Information</legend>
+                                <!-- Optional telephone contact for alternative communication means -->
+                                <p>1. What do you think of your experience at GIC?</p>
+                                <!-- Radio options for experience levels -->
+                                <label for="experience-perfect">Perfect</label>
+                                <input type="radio" id="experience-perfect" name="experience" value="perfect" required>
+                                
+                                <label for="experience-good">Good</label>
+                                <input type="radio" id="experience-good" name="experience" value="good">
+                                
+                                <label for="experience-average">Normal</label>
+                                <input type="radio" id="experience-average" name="experience" value="normal">
+                                
+                                <label for="experience-poor">Poor</label>
+                                <input type="radio" id="experience-poor" name="experience" value="poor">
+                            </fieldset>                           
+                            <fieldset>
+                                <legend>improvement of GIC</legend>
+                                <label for="Resources and Facilities">
+                                    <input type="checkbox" id="improvements" name="improvement" value="Resources and Facilities">
+                                    Resources and Facilities
+                                </label>
+                                <label for="Academic Support">
+                                    <input type="checkbox" id="Support" name="improvement" value="Support">
+                                    Academic Support
+                                </label>
+                                <label for="Course">
+                                    <input type="checkbox" id="Course" name="improvement" value="Course">
+                                    Course Availability and Variety
+                                </label>
+                                <label for="Campus Life">
+                                    <input type="checkbox" id="Campus Life" name="improvement" value="Campus">
+                                    Campus Life and Student Engagement
+                                </label>
+                                <label for="already good">
+                                    <input type="checkbox" id="already good" name="improvement" value="already good">
+                                    Already good
+                                </label>
+                            </fieldset>
+                            <fieldset>
+                                <legend>Additional Feedback</legend>
+                                  <!-- Textarea for any additional comments, required to ensure users provide complete feedback -->
+                                <label for="additional-feedback">Please provide any additional comments or feedback:</label>
+                                <textarea id="additional-feedback" name="additional_feedback" required></textarea>
+                            </fieldset>
+
+                            <!-- Submit button for form submission -->
+                            <input type="submit" value="Submit">
+        
+                        </form>
+                        <p id="thankYouText" style="display:none;"></p>
+
+                    </div> 
+                    <script>
+                        // JavaScript function to provide a thank you message after form submission
+                        function thankYouMessage(e) {
+                            e.preventDefault();
+                            alert('Thank you for filling out our questionnaire!'); 
+                            document.getElementById('dataForm').reset(); 
+                            document.getElementById('thankYouText').style.display = 'block';
+                            window.scrollTo(0,0)/*bring user to front of web*/
+                        }
+                    </script>
+                </div>
+                
+                <!-- Contact information section for the university, providing address and contact details -->
+                <div class="container15">
+                    <p>University of Glasgow</br>
+                    Glasgow International College </br>
+                    Glasgow, G12 8QQ, Scotland</br>
+                    Tel +44 (0) 0000000000</br>
+                    Contact us</br>
+                    Maps and travel</p>
+                </div>
+            </div>
